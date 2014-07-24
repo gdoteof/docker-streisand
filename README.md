@@ -1,5 +1,8 @@
 #Dockerfile for streisand#
 
+
+Sets up a container running streisand, meant for deploying on remote servers via API
+
 ##Tested: 
 
 - [x] Digital Ocean
