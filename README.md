@@ -2,13 +2,13 @@
 
 ##Tested: 
 
-[x] Digital Ocean
+- [x] Digital Ocean
 
 
 ##Untested
-[ ] Amazon
-[ ] Linode
-[ ] Rackspace
+- [ ] Amazon
+- [ ] Linode
+- [ ] Rackspace
 
 
 ```
