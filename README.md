@@ -6,11 +6,10 @@ Sets up a container running streisand, meant for deploying on remote servers via
 ##Tested: 
 
 - [x] Digital Ocean
-
+- [x] Linode
 
 ##Untested
 - [ ] Amazon
-- [ ] Linode
 - [ ] Rackspace
 
 
