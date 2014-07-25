@@ -1,6 +1,13 @@
 #Dockerfile for streisand#
 
 
+You can use the docker-hub automated build (Easy Mode), or build the image yourself
+###Easy Mode
+```
+sudo docker run -i -t gdoteof@streisand-launcher
+```
+
+
 Sets up a container running https://github.com/jlund/streisand, meant for deploying on remote servers via API
 
 ##Tested: 
