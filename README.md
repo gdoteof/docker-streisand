@@ -4,7 +4,7 @@
 You can use the docker-hub automated build (Easy Mode), or build the image yourself
 ###Easy Mode
 ```
-sudo docker run -i -t gdoteof@streisand
+sudo docker run -i -t gdoteof/streisand
 ```
 
 
