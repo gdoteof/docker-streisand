@@ -1,4 +1,4 @@
-FROM tianon/debian-roll:stable
+FROM debian
 
 RUN apt-get update && apt-get install -y git python-pip openssh-client python-dev ruby curl
 
