@@ -1,6 +1,6 @@
 FROM debian
 
-RUN apt-get update && apt-get install -y git python-pip openssh-client python-dev ruby curl
+RUN apt-get update && apt-get install -y git python-pip openssh-client python-dev ruby python-pycurl
 
 ENV HOME /root
 RUN ssh-keygen -f /root/.ssh/id_rsa -q -N ""
