@@ -36,3 +36,5 @@ After it's finished, streisand will try and xdg-open the generated documentation
 ```
 docker cp streisand:/root/streisand/generated-docs/streisand.html streisand.html
 ```
+
+Note that the name of the html file will be the same as the name you gave in the server setup. If you name your server `streisand-demo`, then the file will be `streisand-demo.html`.
