@@ -1,20 +1,27 @@
-FROM debian
+FROM	debian
 
 # For Ansible v2, from https://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-debian
-
-RUN echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' >> /etc/apt/sources.list && \
 # Use --force-yes because the ansible package cannot be authenticated
 
-apt-get update && \
-apt-get install -y --force-yes git python-pip openssh-client python-dev ruby curl ansible
+RUN	echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' >> /etc/apt/sources.list \
+	&& apt-get update && apt-get install -y \
+	--forcees \
+	git \
+	python-pip \
+	openssh-client \
+	python-dev \
+	ruby \
+	curl \
+	ansible
 
-ENV HOME /root
-RUN ssh-keygen -f /root/.ssh/id_rsa -q -N "" &&  pip install markupsafe dopy boto linode-python pyrax
+ENV	HOME	/root
+RUN	ssh-keygen -f /root/.ssh/id_rsa -q -N "" \
+	&& pip install markupsafe dopy boto linode-python pyrax
 
-WORKDIR /root
+WORKDIR	/root
 
-RUN git clone https://github.com/jlund/streisand.git
+RUN	git clone https://github.com/jlund/streisand.git
 
-WORKDIR /root/streisand
+WORKDIR	/root/streisand
 
-CMD ./streisand
+CMD	["./streisand"]
