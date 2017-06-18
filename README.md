@@ -4,13 +4,13 @@
 You can use the docker-hub automated build (Easy Mode), or build the image yourself
 ### Easy Mode
 ```
-sudo docker run -i -t gdoteof/streisand
+mkdir generated-docs
+sudo docker run -v generated-docs:/root/streisand/generated-docs/ -it gdoteof/streisand
 ```
-
 
 Sets up a container running https://github.com/jlund/streisand, meant for deploying on remote servers via API
 
-## Tested: 
+## Tested
 
 - [x] Digital Ocean
 - [x] Linode
@@ -31,10 +31,6 @@ docker run -i -t --name streisand streisand
 
 This will prompt you to enter your API credentials
 
-After it's finished, streisand will try and xdg-open the generated documentation (which will fail).  You should copy it to the host with
-
-```
-docker cp streisand:/root/streisand/generated-docs/streisand.html streisand.html
-```
+After it's finished, streisand will try and xdg-open the generated documentation (which will fail).
 
 Note that the name of the html file will be the same as the name you gave in the server setup. If you name your server `streisand-demo`, then the file will be `streisand-demo.html`.
