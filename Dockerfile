@@ -1,11 +1,10 @@
 FROM	debian
 
 # For Ansible v2, from https://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-debian
-# Use --force-yes because the ansible package cannot be authenticated
 
 RUN	echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' >> /etc/apt/sources.list \
+	&& apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \
 	&& apt-get update && apt-get install -y \
-	--forcees \
 	git \
 	python-pip \
 	openssh-client \
