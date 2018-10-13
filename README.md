@@ -26,7 +26,8 @@ git clone https://github.com/gdoteof/docker-streisand.git
 cd docker-streisand
 
 docker build -t streisand .
-docker run -i -t --name streisand streisand
+mkdir generated-docs
+docker run -v generated-docs:/root/streisand/generated-docs/ -it --name streisand streisand
 ```
 
 This will prompt you to enter your API credentials
