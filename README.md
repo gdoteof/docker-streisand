@@ -2,23 +2,23 @@
 
 
 You can use the docker-hub automated build (Easy Mode), or build the image yourself
+
+Sets up a container running https://github.com/jlund/streisand, meant for deploying on remote servers via API
+
 ### Easy Mode
 ```
 mkdir generated-docs
 sudo docker run -v generated-docs:/root/streisand/generated-docs/ -it gdoteof/streisand
 ```
 
-Sets up a container running https://github.com/jlund/streisand, meant for deploying on remote servers via API
+This will prompt you to enter your API credentials
 
-## Tested
+After it's finished, streisand will try and xdg-open the generated documentation (which will fail).
 
-- [x] Digital Ocean
-- [x] Linode
+Note that the name of the html file will be the same as the name you gave in the server setup. If you name your server `streisand-demo`, then the file will be `streisand-demo.html`.
 
-## Untested
-- [ ] Amazon
-- [ ] Rackspace
 
+### Build the image yourself
 
 ```
 git clone https://github.com/gdoteof/docker-streisand.git
@@ -30,8 +30,15 @@ mkdir generated-docs
 docker run -v generated-docs:/root/streisand/generated-docs/ -it --name streisand streisand
 ```
 
-This will prompt you to enter your API credentials
 
-After it's finished, streisand will try and xdg-open the generated documentation (which will fail).
+## Supported Providers
 
-Note that the name of the html file will be the same as the name you gave in the server setup. If you name your server `streisand-demo`, then the file will be `streisand-demo.html`.
+### Tested
+
+- [x] Digital Ocean
+- [x] Linode
+
+### Untested
+- [ ] Amazon
+- [ ] Rackspace
+
