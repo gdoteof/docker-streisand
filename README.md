@@ -1,3 +1,5 @@
+Please don't use this.  Leaving it for historical purpose only.
+
 # Dockerfile for streisand
 
 
